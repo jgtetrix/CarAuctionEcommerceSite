@@ -47,6 +47,10 @@ body {
     width: 100%;
 }
 
+.logo {
+    height: 200px
+}
+
 #header {
     display: flex;
     align-items: center;
@@ -249,6 +253,7 @@ button.normal {
 
 #copyright {
     text-align: center;
+    padding-top: 45px;
     padding-bottom: 2px;
 }
 
@@ -267,6 +272,7 @@ button.normal {
 #page-header h2,
 #page-header p {
     color: white;
+    margin-bottom: 11%;
 }
 
 
@@ -343,6 +349,7 @@ button.normal {
 
 #about-header {
     background-image: url("img/about-banner.png");
+    background-position-y: 75%;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -356,6 +363,8 @@ button.normal {
 #about-header h2,
 #about-header p {
     color: white;
+    text-transform: uppercase;
+    font-size: 50px;
 }
 
 #about-body {
@@ -484,4 +493,8 @@ button.normal {
 
 #hero button a {
     text-decoration: none;
+}
+
+#bottom-logo {
+    height: 150px;
 }
