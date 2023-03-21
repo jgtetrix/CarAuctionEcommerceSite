@@ -1,0 +1,165 @@
+
+
+/*----- Standard definition for existing HTML tags -----*/
+
+BODY                            {margin:0px;}
+BODY, DIV, TABLE, TD, P        {font-family:calibri, arial,helvetica,sans-serif; font-size:16px; font-color:848484}
+
+pre   {font-size:120%; font-family:calibri, courier,serif;}
+/* -----------------------------------------------------*/
+/* 
+a:link    {color:blue}
+a:visited {color:blue}
+a:focus   {color:blue}      
+a:hover   {color:blue} 
+a:active  {color:blue} */
+
+
+/*----- Definition of form layout -----*/
+#screenTitle         {padding-top:15px; text-align:center; font-size:200%; /*font-style:italic;*/ font-weight:bold;}
+.screen              {padding:0px 10px 0px 5px;}
+
+.label	{vertical-align: middle;}
+.vertical .component.readonly,
+.horizontal .component.readonly {height:auto; padding-bottom:5px;}
+.vertical .component.readonly .control,
+.horizontal .component.readonly .control   {float:none; height:auto; padding-bottom:5px;}
+input { background-color: white }
+
+.hidden,
+.windowIdx           {display:none;}     /* {padding-right:10px; font-weight:bold;} */
+.submit              {padding:5px 0px 1px 0px; text-align:center;}
+.submit input        {width:120px; font-weight:bold}
+
+.required            {color:#cc0000; font-family:courier,serif;}
+
+/* Non-IE border collapse */
+table                {border-spacing: 0px;}
+/* Morgan Hack (border-collapse prevents borders in non-IE browsers)*/
+/* Hides from IE5-mac \*/
+* html table {border-collapse:collapse; }
+/* End hide from IE5-mac */
+table th             {padding:0px 6px 0px 6px; font-size:120%;}
+table td             {padding:2px 6px 2px 6px; vertical-align: top;} /*     border:1px solid;}*/
+table td P { margin: 0px; }
+
+
+table tr th.left, table tr td.left    {text-align:left; background-color: #ffffff;}
+table tr th.right, table tr td.right  {text-align:right; background-color: #ffffff;}
+
+table tr td.left .control  input   {text-align:left; background-color: #ffffff;}
+table tr td.right .control  input  {text-align:right; background-color: #ffffff;}
+
+
+.mainTable, .mainPanel          {width:100%;}
+
+/*----- Definition of menu layout -----*/
+.menu                 {padding:20px 25px 0px 20px;}
+ #menuTitle           {display:none;}/*font-size:200%; font-style:italic; font-weight:bold; padding:5px 1px;}*/
+.menu .left           {float:left; width:45%; }
+.menu .right          {float:right; width:45%; padding-top:10px; text-align:left }
+.menu .submenu        {text-decoration:none; font-weight:bold; font-size:100%; cursor:pointer;
+                       margin:0px;display:block;padding:1px 5px;border:1px solid black;text-align:center; }
+
+.menu .submenu:hover  {}
+.menu UL              {list-style:none; margin:10px 0px 20px 10px; padding:0px; font-size:100%;}
+
+/*----- Definition of basic header, body, and footer zones -----*/
+#webPage              {position:relative; width:95%;}
+#helpPage             {position:relative; width:95%;}
+
+#pageHeader    {background-color:#788AA3; position:relative;}
+#headerBanner  {height:74px; background-image:url(./images/KeanHead.jpg);
+                background-repeat:no-repeat; }
+
+#pageBody      {background-repeat:repeat-x;}
+/* Holly Hack.  See www.positioniseverything.net/articles/hollyhack.html */
+/* Hides from IE5-mac \*/
+* html #pageBody {height:1%;}
+/* End hide from IE5-mac */
+
+#pageBody .clear {clear:both; height:1px}
+
+#bodyWelcome        {float:right; padding:12px 20px; font:bold 12px arial; color:white;}
+#bodyConstituency   {font:small-caps 18px "Arial", sans-serif ; margin-left:105px; padding-top:8px; height:25px; color: white;}
+#bodyForm           {margin-left:100px; background-color:white; color:black; border:3px solid; padding:10px; }
+/* Holly Hack.  See www.positioniseverything.net/articles/hollyhack.html */
+/* Hides from IE5-mac \*/
+* html #bodyForm {height:1%;}
+/* End hide from IE5-mac */
+#bodyForm.portal    {margin-left:0;}
+
+#pageFooter         {background-color:#788AA3;}
+#footerBanner       {height:67px; background-image:url(./images/shell-footBlue.gif);
+                      background-position:right; background-repeat:no-repeat}
+
+
+/*----- Definition of account toolbar, which is displayed in the header banner -----*/
+#acctToolbar      {text-align:center; vertical-align: bottom; padding-top:53px;}
+/* acctToolbar IE Modification
+ * This change sets the IE size to 55, whereas other browsers use 53
+ */
+* html #acctToolbar { padding-top:55px;}
+#acctLogin        {width:70px; border-right:1px groove #4C5976;}
+#acctLogout       {width:70px; border-left:1px groove #4C5976; border-right:1px groove #4C5976;}
+#acctPassword     {width:135px; border-right:1px groove #4C5976;}
+#acctWidget       {width:24px; height:20px; background-image:url(./images/AT-BGBlue.gif); float:right;}
+#acctContact       {width:90px; border-left:1px groove #4C5976;}
+#acctHelp          {width:40px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+#acctConstituency  {width:150px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+#acctMain          {width:80px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+
+
+/*----- Definition of system toolbar, which is displayed in the footer banner -----*/
+#sysToolbar       {text-align:center;}
+#sysLogin        {width:70px; border-right:1px groove #4C5976;}
+#sysLogout       {width:70px; border-left:1px groove #4C5976; border-right:1px groove #4C5976;}
+#sysPassword     {width:135px; border-right:1px groove #4C5976;}
+#sysContact       {width:90px; border-left:1px groove #4C5976;}
+#sysHelp          {width:40px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+#sysConstituency  {width:150px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+#sysMain          {width:80px; border-right:1px groove #4C5976; border-left: 1px groove #4C5976;}
+#sysWidget        {width:20px; height:20px; background-image:url(./images/ST-BGBlue.gif); float:right;}
+
+
+/*----- Standard definitions for all toolbars -----*/
+.toolbar          {margin:0px; padding:0px; list-style:none; white-space: nowrap;}
+.toolbar LI       {float:right; background-color:#788AA3; padding:0 10px 0 10px;}
+.toolbar A        {height:20px; display:block;}
+.toolbar .label   {color:white; font:italic bold small-caps 14px "Arial", sans-serif;}
+
+.toolbar a:link, .toolbar a:visited,
+.toolbar a:hover, .toolbar a:active       {text-decoration:none;}
+
+
+/*----- Standard definition for all areas containing custom text and links -----*/
+.custom                  {padding-left:25px; padding-right:25px; padding-top:10px;}
+.customText              {padding-bottom:10px; color:white; }
+#mainBody .customText, #bodyForm .customText    {color:black;}
+.customLinks             {padding-bottom:10px; text-align:right;}
+.customLinks A           {padding-left:15px; color:white;}
+
+
+
+/*----- Definitions for Help areas ------*/
+#helpPage #bodyForm DIV 		  {font-size: small;}
+#helpPage .helpTitle              {font-size: 150%;}
+#helpPage .helpTitle .screenTitle {/*font-style:italic;*/}
+#helpPage .helpSubtitle           {font-weight:bold; font-size: 120%;}
+#helpPage .field                  {font-weight:bold;}
+#helpPage .Indent0                {margin-left:0px;}
+#helpPage .Indent1                {margin-left:35px;}
+#helpPage .Indent2                {margin-left:35px;}
+#helpPage .Indent3                {margin-left:35px;}
+#helpPage .Indent4                {margin-left:35px;}
+#helpPage .SPAN_BOLD              {font-weight:bold; }
+#helpPage .SPAN_ITALICS           {font-style:italic;}
+#helpPage .SPAN_SMALLCAPS         {font-variant:small-caps;}
+#helpPage .SPAN_ENTRY             {font-weight:bold; font-style:italic;}
+#helpPage .SPAN_KEY               {font-weight:bold; font-style:italic;}
+#helpPage .Error				  {font:bold 120% courier; color:#cc0000;}
+
+/*----- Standard definition for area containing error message text -----*/
+#mainBody .errorText                {padding-left:25px; padding-right:25px; padding-top:10px;}
+.errorText    {padding-bottom:10px; font:bold 120% courier; color:#cc0000;}
+
