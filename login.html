@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BidNDrive</title>
+        <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+	<title>Login Page</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type="text"], input[type="password"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			width: 300px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			padding: 10px;
+			background-color: blue;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover {
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/BidNDrive.png" class="logo" alt="BidNDrive Logo" height="150"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Auctions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class ="active" href="login.html">Login</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+	<form method="post" action="login.php">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<input type="submit" value="Login">
+	</form>
+
+    <footer class="section-p1">
+        <div class="details">
+            <img src="img/BidNDrive.png" height="300">
+            <h4>Contact:</h4>
+            <p><Strong>Address:</Strong> 1000 Morris Ave, Union, New Jersey, 07083</p>
+            <p><Strong>Phone:</Strong> +1 888 888 8888</p>
+            <p><Strong>Hours:</Strong> 08:00 - 16:00 EST Monday - Friday</p>
+        </div>
+        <div id="copyright">
+            <p>BidNDrive.com © 2022 BidNDrive </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
