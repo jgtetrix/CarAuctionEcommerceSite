@@ -344,18 +344,19 @@ button.normal {
 #about-header {
     background-image: url("img/about-banner.png");
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
     display: flex;
+    background-position-y: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 14px;
+    padding: 5px;
 }
 
 #about-header h2,
 #about-header p {
-    color: white;
+    color: black;
 }
 
 #about-body {
