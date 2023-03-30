@@ -365,13 +365,37 @@ button.normal {
 }
 
 #about-body img {
-    width: 80%;
+    width: 50%;
     height: auto;
+    border-radius: 20%;
 
 }
 
 #about-body div {
     padding-left: 40px;
+    
+    
+}
+
+#about-middle-header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#about-body #about_one {
+    width: 20%;
+    height: 10;
+
+}
+#about-body p{
+
+   padding: 50px;
+
 }
 
 #contact-header {
@@ -486,3 +510,5 @@ button.normal {
 #hero button a {
     text-decoration: none;
 }
+
+
