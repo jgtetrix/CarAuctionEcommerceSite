@@ -39,6 +39,14 @@ p {
     padding: 40px 80px;
 }
 
+.section-about {
+    padding: 40px 80px;
+
+    justify-content: center;
+
+   
+}
+
 .section-m1 {
     margin: 40px 0;
 }
@@ -364,7 +372,7 @@ button.normal {
     align-items: center;
 }
 
-#about-body img {
+#about-we {
     width: 50%;
     height: auto;
     border-radius: 20%;
@@ -373,7 +381,7 @@ button.normal {
 
 #about-body div {
     padding-left: 40px;
-    
+    text-align: center;
     
 }
 
@@ -388,13 +396,29 @@ button.normal {
 }
 
 #about-body #about_one {
-    width: 20%;
-    height: 10;
+    width: 10%;
+    
+
+}
+#about-body #about_two {
+    width: 13%;
+    
+    padding-bottom: 40px;
+   
+}
+#about-body #about_three {
+    width: 10%;
+    padding-top: 30px;
+   
+}
+#about_task {
+    width: 45%;
+    
 
 }
 #about-body p{
 
-   padding: 50px;
+   padding: 100px;
 
 }
 
