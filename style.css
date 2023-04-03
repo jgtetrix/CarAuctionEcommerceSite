@@ -59,8 +59,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background: grey;
+    padding: 0px 80px;
+    background: rgb(202, 202, 202);
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     z-index: 999;
     position: sticky;
@@ -414,13 +414,10 @@ button.normal {
 }
 #about_task {
     width: 45%;
-    
-
 }
+
 #about-body p{
-
    padding: 100px;
-
 }
 
 #contact-header {
