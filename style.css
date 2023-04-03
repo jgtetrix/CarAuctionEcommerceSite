@@ -202,15 +202,15 @@ body {
 }
 
 #newsletter h4 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 27px;
+    font-weight: 800;
     color: #fff;
 }
 
 #newsletter p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #6b7afd;
+    font-size: 21px;
+    font-weight: 800;
+    color: #8266fc;
 } 
 
 #newsletter p span {
