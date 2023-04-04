@@ -14,9 +14,7 @@ if ($login =="" || $bpassword == "" ) {
         die(" Login Fields Are Empty\n");
 }
 else{
-        $sql= "SELECT * FROM BidNDriveDB.Users WHERE login='$login'";
-  
-        
+        $sql= "SELECT * FROM BidNDriveDB.Users WHERE login='$login'";  
 }
 
 
@@ -28,12 +26,11 @@ $row = mysqli_fetch_array($result);
 if ($row == 0){  
         echo "<br>Login failed either your username or password is invaild\n";
         
-}       
-else if ($row["login"] == $login && $row["password_"] == $bpassword){
+} else if ($row["login"] == $login && $row["password_"] == $bpassword){
         session_start();
         $_SESSION['username'] = $username;
 
-        echo"Successfully Logged in"
+        echo "Successfully Logged in";
 
 }
 
