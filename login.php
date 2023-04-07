@@ -30,7 +30,7 @@ if ($row == 0){
         session_start();
         $_SESSION['username'] = $username;
 
-        echo "Successfully Logged in";
+        echo "success";
 
 }
 
