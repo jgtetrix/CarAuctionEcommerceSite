@@ -396,20 +396,18 @@ button.normal {
     padding: 5px;
 }
 
-#about-body #about_one {
-    width: 10%;
+#about_one {
+    width: 50px;
     
 
 }
-#about-body #about_two {
-    width: 13%;
+#about_two {
+    width: 50px;
     
-    padding-bottom: 40px;
    
 }
-#about-body #about_three {
-    width: 10%;
-    padding-top: 30px;
+#about_three {
+    width: 50px;
    
 }
 #about_task {
@@ -418,6 +416,17 @@ button.normal {
 
 #about-body p{
    padding: 100px;
+}
+
+#about-guide:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+#about-guide div{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 }
 
 #contact-header {
