@@ -542,4 +542,45 @@ button.normal {
     text-decoration: none;
 }
 
+.styled-table {
+    border-collapse: collapse;
+    width: 1000px;
+    height: 20px;
+    font-size: 0.78em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: 25px;
+    margin-bottom: 0px;
+    margin-right: 100px;
+    margin-left: 15px;
+}
 
+.styled-table thead tr {
+    background-color:rgb(199, 199, 199);
+    text-align: left;
+}
+
+.styled-table th, td {
+    padding: 6px 9px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(128, 128, 128);
+}
+
+#main-image {
+    height: 500px;
+    padding: 25px;
+}
+
+#details-body {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
