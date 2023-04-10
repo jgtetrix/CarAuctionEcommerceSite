@@ -596,3 +596,78 @@ button.normal {
     padding-right: 25px;
     padding-bottom: 0px;
 }
+
+#additional {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.additional-photos {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+  
+.additional-photos img {
+    width: 250px; /* adjust the width of the additional photos as needed */
+    height: auto;
+    object-fit: cover;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+#place-bid {
+    text-align: center;
+    width: 680px;
+    margin-left: 22px;
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+#place-bid button {
+    margin-left: 25px;
+    width: 680px;
+    background-color: #34a853;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
