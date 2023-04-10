@@ -195,41 +195,41 @@
     </script>
 
     <script>
-        // Get all elements with class "additional-photos"
-        var additionalPhotos = document.querySelectorAll('.additional-photos');
+    // Get all elements with class "additional-photos"
+    var additionalPhotos = document.querySelectorAll('.additional-photos');
 
-        // Loop through each "additional-photos" element
-        additionalPhotos.forEach(function(additionalPhoto) {
-        // Add click event listener to each "additional-photos" element
-        additionalPhoto.addEventListener('click', function() {
-            // Get the clicked image source and alt text
-            var imageSrc = this.querySelector('img').src;
-            var imageAlt = this.querySelector('img').alt;
+    // Loop through each "additional-photos" element
+    additionalPhotos.forEach(function(additionalPhoto) {
+    // Add click event listener to each "additional-photos" element
+    additionalPhoto.addEventListener('click', function(event) {
+        // Get the clicked image source and alt text
+        var imageSrc = event.target.src;
+        var imageAlt = event.target.alt;
 
-            // Create a new modal image element
-            var modalImage = new Image();
-            modalImage.src = imageSrc;
-            modalImage.alt = imageAlt;
+        // Create a new modal image element
+        var modalImage = new Image();
+        modalImage.src = imageSrc;
+        modalImage.alt = imageAlt;
 
-            // Show the modal with the clicked image
-            document.getElementById('modal').style.display = 'block';
-            document.getElementById('modal-image').src = imageSrc;
-            document.getElementById('modal-image').alt = imageAlt;
-            document.getElementById('caption').innerHTML = imageAlt;
+        // Show the modal with the clicked image
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('modal-image').src = imageSrc;
+        document.getElementById('modal-image').alt = imageAlt;
+        document.getElementById('caption').innerHTML = imageAlt;
 
-            // Close the modal when the "x" button is clicked
-            document.getElementsByClassName('close')[0].addEventListener('click', function() {
+        // Close the modal when the "x" button is clicked
+        document.getElementsByClassName('close')[0].addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'none';
+        });
+
+        // Close the modal when clicked outside the modal image
+        window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('modal')) {
             document.getElementById('modal').style.display = 'none';
-            });
-
-            // Close the modal when clicked outside the modal image
-            window.addEventListener('click', function(event) {
-            if (event.target == document.getElementById('modal')) {
-                document.getElementById('modal').style.display = 'none';
-            }
-            });
+        }
         });
-        });
+    });
+    });
     </script>
 
     <section id="newsletter" class="section-p1 section-m1">
