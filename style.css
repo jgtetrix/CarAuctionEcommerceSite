@@ -576,11 +576,23 @@ button.normal {
 
 #main-image {
     height: 500px;
-    padding: 25px;
+    padding-top: 21px;
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-bottom: 21px;
+    border-radius: 35px;
 }
 
 #details-body {
     display: flex;
     align-items: top;
     justify-content: space-between;
+    padding-left: 25px;
+}
+
+#car-title {
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 25px;
+    padding-bottom: 0px;
 }
