@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <Style>
         #countdown-bid-bar{
-            width: 27.7%;
+            width: 26.7%;
             height: 4%;
             background-color: rgb(99, 146, 231);
             box-shadow: 1px 2px 5px grey;
@@ -16,21 +16,22 @@
 
         #countdown{
             float: left;
-            width: 50%;
+            width: 60%;
             color: whitesmoke;
             text-align: left;
-            padding-left: 1%;
-            padding-top: 1%;
-            font-size: 100%;
+            padding-left: 4%;
+            padding-top: 3.5%;
+            font-size: 85%;
+            font-weight: 600;
         }
 
         #highest-bid{
-            float: right;
-            width: 50px;
+            display: flex;
+            padding-left: 4%;
             color: whitesmoke;
-            padding-left: 150px;
-            padding-top: 5px;
-            /* font-size: 90%; */
+            padding-top: 3.5%;
+            font-size: 85%;
+            font-weight: 600;
         }
         
     </Style>
@@ -56,12 +57,16 @@
     <section id="details-body">
         <div> 
             <img src="img/alfa-1.jpg" id="main-image">
-            <section id="countdown-bid-bar">
-                <div id="countdown"></div>
-                <div id="highest-bid"></div>
-            </section>
-            <div id="place-bid">
-                <button>Place Bid</button>
+            <div id="test">
+                <section id="countdown-bid-bar">
+                    <div id="countdown"></div>
+                    <div id="highest-bid"></div>
+                </section>
+            </div>
+            <div id="place-bid-location">
+                <div id="place-bid">
+                    <button>Place Bid</button>
+                </div>
             </div>
         </div>
         
