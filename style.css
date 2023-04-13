@@ -550,7 +550,7 @@ button.normal {
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-top: 0px;
+    margin-top: 37px;
     margin-bottom: 0px;
     margin-right: 0px;
     margin-left: 0px;
@@ -575,7 +575,7 @@ button.normal {
 }
 
 #main-image {
-    height: 28%;
+    height: 40%;
     padding-top: 21px;
     padding-left: 21px;
     padding-right: 21px;
@@ -584,12 +584,25 @@ button.normal {
 }
 
 #details-body {
-    display: flex;
-    align-items: top;
+    display:grid;
+    grid-template-columns: 1fr 2fr; /* Two equal columns */
+    grid-gap: 10px; /* Gap between columns */
     justify-content: space-between;
     padding-left: 1.5rem;
+    overflow: scroll;
+
 }
 
+
+
+@media screen and (max-width: 1090px) {
+    #details-body {
+      grid-template-columns: 1fr; /* One column */
+    }
+    #main-image {
+        height: 700px;
+    }
+  }
 #car-title {
     padding-top: 25px;
     padding-left: 50px;
@@ -647,11 +660,11 @@ button.normal {
     right: 30px;
     cursor: pointer;
 }
-
+/* 
 #test {
     padding-left: 1%;
     width: 26.7%;
-}
+} */
 
 
 
