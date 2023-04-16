@@ -576,10 +576,10 @@ button.normal {
 
 #main-image {
     height: 55vh;
-    padding-top: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
     border-radius: 35px;
 }
 
@@ -593,8 +593,6 @@ button.normal {
 
 }
 
-/* END HERE */
-
 @media screen and (max-width: 1090px) {
     #details-body {
       grid-template-columns: 1fr; /* One column */
@@ -602,12 +600,12 @@ button.normal {
     #main-image {
         height: 700px;
     }
-  }
+}
+  
 #car-title {
-    padding-top: 25px;
-    padding-left: 50px;
-    padding-right: 25px;
-    padding-bottom: 0px;
+    padding-top: 2.5vh;
+    padding-right: 2.5vh;
+    padding-left: 5vh;
 }
 
 #additional {
