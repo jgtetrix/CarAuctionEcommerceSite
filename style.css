@@ -695,3 +695,39 @@ button.normal {
     height: 110vh;
 }
 
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(150%, 50%); */
+    border: 3px solid #999999;
+    z-index: 9;
+}
+
+.formContainer {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.formContainer .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.formContainer .cancel {
+    background-color: #cc0000;
+}
+
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
