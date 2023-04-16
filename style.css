@@ -544,7 +544,7 @@ button.normal {
 
 .styled-table {
     border-collapse: collapse;
-    width: 1000px;
+    width: 110vh;
     height: 20px;
     font-size: 0.78em;
     font-family: sans-serif;
@@ -575,11 +575,11 @@ button.normal {
 }
 
 #main-image {
-    height: 40%;
-    padding-top: 21px;
-    padding-left: 21px;
-    padding-right: 21px;
-    padding-bottom: 21px;
+    height: 55vh;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
     border-radius: 35px;
 }
 
@@ -593,7 +593,7 @@ button.normal {
 
 }
 
-
+/* END HERE */
 
 @media screen and (max-width: 1090px) {
     #details-body {
@@ -617,13 +617,13 @@ button.normal {
 
 .additional-photos {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    padding-left: 15px;
+    gap: 1em;
+    margin-top: 1em;
+    padding-left: 1.5em;
 }
   
 .additional-photos img {
-    width: 250px; /* adjust the width of the additional photos as needed */
+    width: 27vh; /* adjust the width of the additional photos as needed */
     height: auto;
     object-fit: cover;
 }
@@ -675,7 +675,7 @@ button.normal {
     color: whitesmoke;
     text-align: left;
     padding-left: 4%;
-    padding-top: 3%;
+    padding-top: 2%;
     font-size: 85%;
     font-weight: 600;
 }
@@ -684,12 +684,14 @@ button.normal {
     display: flex;
     padding-left: 4%;
     color: whitesmoke;
-    padding-top: 3%;
+    padding-top: 2%;
     font-size: 85%;
     font-weight: 600;
 }
 
 #test {
     padding-left: 2rem;
-    width: 40.5%;
+    width: 72vh;
+    height: 110vh;
 }
+
