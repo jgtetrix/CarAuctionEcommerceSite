@@ -734,12 +734,13 @@ button.normal {
 #place-bid button {
     /* Existing properties */
     width: 100%;
-    background-color: #34a853;
+    background-color: #53bb6e;
     border: none;
     border-radius: 25px;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 2vh;
+    font-weight: 600;
     /* Add the following properties */
     box-shadow: 1px 2px 5px grey; /* Add box shadow */
     height: 4.5vh; /* Set height to match #countdown-bid-bar */
