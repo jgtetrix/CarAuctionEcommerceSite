@@ -27,9 +27,7 @@ if ($row == 0){
         echo "<br>Login failed either your username or password is invaild\n";
         
 } else if ($row["login"] == $login && $row["password_"] == $bpassword){
-        session_start();
-        $_SESSION['username'] = $username;
-
+        setcookie("login_cookie",$login, time()+ 3600);
         echo "success";
 
 }

@@ -63,10 +63,10 @@
 				data: {username: username, password: password},
 				success: function(response) {
 					if (response == 'success') {
-						$('#login-form').append('<p>User has successfully login!</p>');
+						$('#login-form').append('<p color="green">User has successfully login!</p>');
 					} else {
 					// Display error message
-					$('#login-form').append('<p class="error">Invalid login credentials</p>');
+					$('#login-form').append('<p color="red">Invalid login credentials</p>');
 					}
 				}
 				});
