@@ -589,6 +589,7 @@ button.normal {
     grid-gap: 10px; /* Gap between columns */
     justify-content: space-between;
     padding-left: 1.5rem;
+    overflow: scroll;
 }
 
 @media screen and (max-width: 1090px) {
