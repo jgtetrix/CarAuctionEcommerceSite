@@ -596,7 +596,7 @@ button.normal {
       grid-template-columns: 1fr; /* One column */
     }
     #main-image {
-        height: 700px;
+        height: 550px;
     }
 }
   
@@ -689,7 +689,7 @@ button.normal {
     padding-bottom: 1rem;
 }
 
-.formPopup {
+#popupForm {
     display: none;
     position: fixed;
     left: 50%;
