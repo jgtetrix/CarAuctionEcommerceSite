@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BidNDrive</title>
     <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -39,7 +40,8 @@
             </div>
             <div class="loginPopup">
                 <div class="formPopup" id="popupForm">
-                  <form action="/pushBid.php" class="formContainer">
+                  <form action="placeBid.php" class="formContainer">
+                    <input type="hidden" name="car_id" value="1">
                     <label for="bidAmount">Bid Amount:</label>
                     <input type="number" id="bidAmount" name="bidAmount" required><br>
                     <label for="name">Name:</label>
@@ -191,8 +193,26 @@
             if (time.distance < 0) {    //When countdown is 0 changes the text to SOLD
             clearInterval(interval);
             timer.innerHTML = 'SOLD';
+            $.ajax({
+                    url: "send_winner_email.php",
+                    type: "POST",
+                    data: { car_id: 1 },
+                    success: (response) => {
+                        // Check if the response indicates success or failure
+                        if (response.success) {
+                            console.log('success')
+                        } else {
+                        // If the response indicates failure, log the error to the console
+                        console.error(response.error);
+                        }
+                    },
+                    error: (xhr, status, error) => {
+                        // If the AJAX request fails, log the error to the console
+                        console.error(error);
+                    }
+                });
             }
-        }
+        }   
             const endDate = new Date('April 20, 2023 23:59:59').getTime();  //Gets end Date (Need to Query DB)
     
             updateCountdown(endDate);
