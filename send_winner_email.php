@@ -26,7 +26,7 @@ $winning_user_email = $row["email"];
 $to = $winning_user_email;
 $subject = "Congratulations! You've won the auction for car #$car_id";
 $message = "Dear $winning_user_name,\n\nCongratulations! You've won the auction for car #$car_id with a bid of $highest_bid. Please contact us to arrange payment and pickup/delivery of the car.\n\nBest regards,\nThe Car Auction Team";
-$headers = "From: auctions@cbidndrive.com\r\n";
+$headers = "From: auctions@bidndrive.com\r\n";
 $headers = "Reply-To: auctions@bidndrive.com\r\n";
 $headers = "Content-Type: text/plain; charset=UTF-8\r\n";
 
