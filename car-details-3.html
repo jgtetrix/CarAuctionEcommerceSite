@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BidNDrive</title>
     <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,9 +37,31 @@
                     <button>Place Bid</button>
                 </div>
             </div>
-        </div>
         
-        <div>
+            <div class="loginPopup">
+                <div class="formPopup" id="popupForm">
+                    <form action="placeBid.php" class="formContainer" method="post">
+                    <input type="hidden" name="car_id" value="1">
+                    <label for="bidAmount">Bid Amount:</label>
+                    <input type="number" id="bidAmount" name="bidAmount" required><br>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+                    <label for="cc">Credit Card Information:</label>
+                    <input type="text" id="cc" name="cc" required><br>
+                    <input type="submit" value="Submit">
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-side-flex">
             <table class="styled-table">
                 <thead>
                     <tr>
@@ -95,16 +118,14 @@
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Front Corner -2.jpeg" alt="Car Photo 1-3">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Front Corner.jpeg" alt="Car Photo 1-4">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Front-2.jpeg" alt="Car Photo 1-5">
-                <img src="img/2002ToyotaCamryXLEV6Sedan/Front.jpeg" alt="Car Photo 1-6">
-                <img src="img/2002ToyotaCamryXLEV6Sedan/Rear Corner.jpeg" alt="Car Photo 1-12">
+                <!-- Add more additional photos as needed -->
             </div>
             <div class="additional-photos">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Interior 2.jpeg" alt="Car Photo 1-7">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Interior Rear.jpeg" alt="Car Photo 1-8">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Interior.jpeg" alt="Car Photo 1-9">
                 <img src="img/2002ToyotaCamryXLEV6Sedan/Keys.jpeg" alt="Car Photo 1-10">
-                <img src="img/2002ToyotaCamryXLEV6Sedan/Miles.jpeg" alt="Car Photo 1-11">
-                <img src="img/2002ToyotaCamryXLEV6Sedan/Rear.jpeg" alt="Car Photo 1-13">
+                <!-- Add more additional photos as needed -->
             </div>
 
             <div id="modal" class="modal">
@@ -116,58 +137,130 @@
         </div>
     </section>
 
-    <script>
-        function countdown(endDate) {
-            const now = new Date().getTime(); //Finds the difference between the 'Current time' and 'End time' of the listing
-            const distance = endDate - now;
-    
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-            return {
-            days,
-            hours,
-            minutes,
-            seconds,
-            distance
-            };
-        }
-    </script>
-    
-    <script>
-        function updateCountdown(endDate) {
-            const parent = document.getElementById('countdown-bid-bar'); //Finds the specific section on the html page
-    
-            const timer = parent.querySelector('#countdown');
-    
-            const time = countdown(endDate);    //Finds time difference
-    
-            timer.innerHTML = `Time Remaining: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`; //Prints
-    
-            if (time.distance < 0) {    //When countdown is 0 changes the text to SOLD
-            clearInterval(interval);
-            timer.innerHTML = 'SOLD';
-            }
-        }
-            const endDate = new Date('April 20, 2023 23:59:59').getTime();  //Gets end Date (Need to Query DB)
-    
-            updateCountdown(endDate);
-    
-            const interval = setInterval(() => { //Constantly undates every second
-            updateCountdown(endDate);
-            }, 1000);
-    </script>
-    
-    <script>
-            const parent = document.getElementById('countdown-bid-bar'); //Finds the specific section on the html page
-    
-            const bid = parent.querySelector('#highest-bid');
-            bid.innerHTML = "Highest Bid: $10,000";
-    </script>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Our Newsletter</h4>
+            <p>Get E-mail updates about our latest drops and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
 
-    <script>
+    <footer class="section-p1">
+        <div class="details">
+            <img src="img/BidNDrive.png" height="300">
+            <h4>Contact:</h4>
+            <p><Strong>Address:</Strong> 1000 Morris Ave, Union, New Jersey, 07083</p>
+            <p><Strong>Phone:</Strong> +1 888 888 8888</p>
+            <p><Strong>Hours:</Strong> 08:00 - 16:00 EST Monday - Friday</p>
+        </div>
+        <div id="copyright">
+            <p>BidNDrive.com © 2022 BidNDrive </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+<!-- BEGINNING OF SCRIPTS -->
+
+<script>
+    function isset() {
+        var cookie = document.cookie;
+        if (cookie != NULL) {
+            return true;
+        }
+        return false;
+
+    }
+</script>
+<script>
+    function openForm() {
+        //  if (isset() == true){
+            document.getElementById("popupForm").style.display = "block";
+        //  }
+        //  else{
+        //     alert("Please Login before you place a bid!");  \\ Disabled until we host it
+        //  }
+      
+    }
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+</script>
+
+<script>
+    function countdown(endDate) {
+        const now = new Date().getTime(); //Finds the difference between the 'Current time' and 'End time' of the listing
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        return {
+        days,
+        hours,
+        minutes,
+        seconds,
+        distance
+        };
+    }
+</script>
+
+<script>
+    function updateCountdown(endDate) {
+        const parent = document.getElementById('countdown-bid-bar'); //Finds the specific section on the html page
+
+        const timer = parent.querySelector('#countdown');
+
+        const time = countdown(endDate);    //Finds time difference
+
+        timer.innerHTML = `Time Remaining: ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s`; //Prints
+
+        if (time.distance < 0) {    //When countdown is 0 changes the text to SOLD
+        clearInterval(interval);
+        timer.innerHTML = 'SOLD';
+        $.ajax({
+                url: "send_winner_email.php",
+                type: "POST",
+                data: { car_id: 1 },
+                success: (response) => {
+                    // Check if the response indicates success or failure
+                    if (response.success) {
+                        console.log('success')
+                    } else {
+                    // If the response indicates failure, log the error to the console
+                    console.error(response.error);
+                    }
+                },
+                error: (xhr, status, error) => {
+                    // If the AJAX request fails, log the error to the console
+                    console.error(error);
+                }
+            });
+        }
+    }   
+        const endDate = new Date('April 20, 2023 23:59:59').getTime();  //Gets end Date (Need to Query DB)
+
+        updateCountdown(endDate);
+
+        const interval = setInterval(() => { //Constantly undates every second
+        updateCountdown(endDate);
+        }, 1000);
+</script>
+
+<script>
+        const parent = document.getElementById('countdown-bid-bar'); //Finds the specific section on the html page
+
+        const bid = parent.querySelector('#highest-bid');
+        bid.innerHTML = "Highest Bid: $10,000";
+</script>
+
+<script>
     // Get all elements with class "additional-photos"
     var additionalPhotos = document.querySelectorAll('.additional-photos');
 
@@ -202,35 +295,9 @@
         }
         });
     });
-    });
-    </script>
+});
+</script>
 
-    <section id="newsletter" class="section-p1 section-m1">
-        <div class="newstext">
-            <h4>Sign Up For Our Newsletter</h4>
-            <p>Get E-mail updates about our latest drops and <span>special offers.</span></p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email address">
-            <button class="normal">Sign Up</button>
-        </div>
-    </section>
-
-    <footer class="section-p1">
-        <div class="details">
-            <img src="img/BidNDrive.png" height="300">
-            <h4>Contact:</h4>
-            <p><Strong>Address:</Strong> 1000 Morris Ave, Union, New Jersey, 07083</p>
-            <p><Strong>Phone:</Strong> +1 888 888 8888</p>
-            <p><Strong>Hours:</Strong> 08:00 - 16:00 EST Monday - Friday</p>
-        </div>
-        <div id="copyright">
-            <p>BidNDrive.com © 2022 BidNDrive </p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+<!-- END OF SCRIPTS -->
 
 </html>
-
