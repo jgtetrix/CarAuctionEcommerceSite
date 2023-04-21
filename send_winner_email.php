@@ -9,14 +9,14 @@ $con = mysqli_connect($host,$username, $password, $dbname)
 
 
 // Retrieve the highest bid and the user who placed that bid
-$sql = "SELECT MAX(amount) AS highest_bid, user_id FROM Bid WHERE car_id = $car_id";
+$sql = "SELECT MAX(amount) AS highest_bid, user_id FROM BidNDriveDB.Bids WHERE car_id = $car_id";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $highest_bid = $row["highest_bid"];
 $winning_user_id = $row["user_id"];
 
 // Retrieve the name and email address of the winning user
-$sql = "SELECT name, email FROM User WHERE user_id = $winning_user_id";
+$sql = "SELECT name, email FROM BidNDriveDB.Users WHERE user_id = $winning_user_id";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 $winning_user_name = $row["name"];
