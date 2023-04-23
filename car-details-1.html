@@ -44,8 +44,9 @@
                 <div class="formPopup" id="popupForm">
                     <form action="placeBid.php" class="formContainer" method="post">
                     <input type="hidden" name="car_id" value="1">
+                    <input type="hidden" name="user_id" value="">
                     <label for="bidAmount">Bid Amount:</label>
-                    <input type="number" id="bidAmount" name="bidAmount" required><br>
+                    <input type="number" id="bid_amount" name="bid_amount" required><br>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required><br>
                     <label for="address">Address:</label>
@@ -169,8 +170,7 @@
 
 <script>
     function isset() {
-        var cookie = document.cookie;
-        if (cookie != NULL) {
+        if (document.cookie.indexOf("login_cookie") >= 0) {
             return true;
         }
         return false;
@@ -298,6 +298,36 @@
         });
     });
 });
+</script>
+
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    var myCookieValue = getCookie('login_cookie');
+    document.getElementsByName('user_id').value = myCookieValue;
+
+</script>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var alertParam = urlParams.get('alert');
+    if (alertParam === 'true') {
+            alert('Your bid is too low, please place a bid that is greater than the current highest bid.');   
+    }
+
 </script>
 
 <!-- END OF SCRIPTS -->

@@ -8,6 +8,15 @@
         <title>BidNDrive</title>
         <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
+        <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var alertParam = urlParams.get('alert');
+            if (alertParam === 'true') {
+                    alert('Your bid is too low, please place a bid that is greater than the current highest bid.');   
+            }
+
+        </script>
+
 </head>
 
 <body>
