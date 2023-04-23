@@ -625,7 +625,7 @@ button.normal {
   
 .additional-photos img {
     width: 27vh; /* adjust the width of the additional photos as needed */
-    height: auto;
+    height: 20vh;
     object-fit: cover;
 }
 
