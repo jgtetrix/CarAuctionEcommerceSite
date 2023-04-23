@@ -10,7 +10,14 @@ $con = mysqli_connect($host,$username, $password, $dbname)
 
 $sql = "SELECT MAX(amount) AS highest_bid, user_id FROM BidNDriveDB.Bids WHERE car_id = $car_id";
 $result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+$highest_bid = $row["highest_bid"];
 
+
+$sql = "SELECT end_time from BidNDriveDB.Cars WHERE car_id = $car_id";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+$end_time = $row["end_time"];
 
 mysqli_close($con);
 ?>
