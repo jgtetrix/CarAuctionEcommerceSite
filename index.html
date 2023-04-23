@@ -11,8 +11,10 @@
         <script>
             var urlParams = new URLSearchParams(window.location.search);
             var alertParam = urlParams.get('alert');
-            if (alertParam === 'true') {
+            if (alertParam === 'failed') {
                     alert('Your bid is too low, please place a bid that is greater than the current highest bid.');   
+            }else if (alertParam === 'success'){
+                    alert('You have sucessfully placed your bid!');
             }
 
         </script>

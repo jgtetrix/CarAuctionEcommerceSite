@@ -20,7 +20,9 @@ if ($bid_amount <= $highest_bid){
     header('Location: index.html?alert=true');
 }
 else{
-    $sql = "INSERT INTO Bid (user_id, car_id, bid_amount) VALUES ('$user_id', '$car_id', '$bid_amount')";
+    $sql = "INSERT INTO Bids (user_id, car_id, bid_amount) VALUES ('$user_id', '$car_id', '$bid_amount')";
+    $result = mysqli_query($con, $sql);
+    header('Location: index.html?success=true');
 }
 
 
