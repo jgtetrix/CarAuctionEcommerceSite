@@ -31,7 +31,7 @@
             <div id="test">
                 <section id="countdown-bid-bar">
                     <div id="countdown"></div>
-                    <div id="highest-bid"><p>Highest Bid: $<?php echo $highest_bid; ?></p></div>
+                    <div id="highest-bid">Highest Bid: $</div>
                 </section>
             </div>
             <div id="place-bid-location">
@@ -254,13 +254,6 @@
         }, 1000);
 </script>
 
-<script>
-        
-        // const parent = document.getElementById('countdown-bid-bar'); //Finds the specific section on the html page
-
-        // const bid = parent.querySelector('#highest-bid');
-        // bid.innerHTML = "Highest Bid: $<?php echo $highest_bid; ?>";
-</script>
 
 <script>
     // Get all elements with class "additional-photos"
@@ -321,6 +314,19 @@
     document.getElementsByName('user_id').value = myCookieValue;
 
 </script>
+
+<script>
+    $.ajax({        
+          url: "get_highest_bid_time.php",       
+          type: "POST",       
+          data: { car_id: "1" },       
+          success: function(response) {       
+                 document.getElementById("highest-bid").textContent = "Highest Bid: $" + response;
+          }       
+
+     });        
+</script>
+
 
 <!-- END OF SCRIPTS -->
 
