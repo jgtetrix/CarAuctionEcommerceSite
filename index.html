@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BidNDrive</title>
         <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script>
             var urlParams = new URLSearchParams(window.location.search);
@@ -47,7 +48,7 @@
                 <div class="desc">
                     <span>Alfa Romeo</span>
                     <h5>2018 Giulia Quadrifoglio</h5>
-                    <h4>$30,000</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -55,8 +56,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2015 Subaru WRX</h5>
-                    <h4>$15,000
-                    </h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -64,8 +64,7 @@
                 <div class="desc">
                     <span>Toyota</span>
                     <h5>2002 Toyota Camry XLE V6</h5>
-                    <h4>$5,000
-                    </h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -73,8 +72,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2015 BMW i8 Coupe</h5>
-                    <h4>$60,000
-                    </h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -82,7 +80,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2004 BMW 330i ZHP Sedan</h5>
-                    <h4>$7,900</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -90,7 +88,7 @@
                 <div class="desc">
                     <span>Honda</span>
                     <h5>2002 Honda CR-V EX AWD</h5>
-                    <h4>$10,700</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -98,7 +96,7 @@
                 <div class="desc">
                     <span>Toyota</span>
                     <h5>2005 Toyota Tacoma X-Runner</h5>
-                    <h4>$17,250</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -106,7 +104,7 @@
                 <div class="desc">
                     <span>Lexus</span>
                     <h5>2004 Lexus GS 430</h5>
-                    <h4>$185</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -114,7 +112,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2013 Subaru Impreza WRX STI Hatchback</h5>
-                    <h4>$15,873</h4>
+                    <h4 id="current-price"></h4>
                 </div>
             </div>
            
@@ -146,6 +144,19 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "1" },       
+              success: function(response) {       
+                     document.getElementById("current-price").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+
 </body>
 
 </html>
