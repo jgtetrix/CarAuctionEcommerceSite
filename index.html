@@ -48,7 +48,7 @@
                 <div class="desc">
                     <span>Alfa Romeo</span>
                     <h5>2018 Giulia Quadrifoglio</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-1"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -56,7 +56,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2015 Subaru WRX</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-2"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -64,7 +64,7 @@
                 <div class="desc">
                     <span>Toyota</span>
                     <h5>2002 Toyota Camry XLE V6</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-3"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -72,7 +72,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2015 BMW i8 Coupe</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-4"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -80,7 +80,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2004 BMW 330i ZHP Sedan</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-5"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -88,7 +88,7 @@
                 <div class="desc">
                     <span>Honda</span>
                     <h5>2002 Honda CR-V EX AWD</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-6"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -96,7 +96,7 @@
                 <div class="desc">
                     <span>Toyota</span>
                     <h5>2005 Toyota Tacoma X-Runner</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-7"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -104,7 +104,7 @@
                 <div class="desc">
                     <span>Lexus</span>
                     <h5>2004 Lexus GS 430</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-8"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -112,7 +112,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2013 Subaru Impreza WRX STI Hatchback</h5>
-                    <h4 id="current-price"></h4>
+                    <h4 id="current-price-9"></h4>
                 </div>
             </div>
            
@@ -151,7 +151,95 @@
               type: "POST",       
               data: { car_id: "1" },       
               success: function(response) {       
-                     document.getElementById("current-price").textContent = "Highest Bid: $" + response;
+                     document.getElementById("current-price-1").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "2" },       
+              success: function(response) {       
+                     document.getElementById("current-price-2").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "3" },       
+              success: function(response) {       
+                     document.getElementById("current-price-3").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "4" },       
+              success: function(response) {       
+                     document.getElementById("current-price-4").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "5" },       
+              success: function(response) {       
+                     document.getElementById("current-price-5").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "6" },       
+              success: function(response) {       
+                     document.getElementById("current-price-6").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "7" },       
+              success: function(response) {       
+                     document.getElementById("current-price-7").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "8" },       
+              success: function(response) {       
+                     document.getElementById("current-price-8").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "9" },       
+              success: function(response) {       
+                     document.getElementById("current-price-9").textContent = "Highest Bid: $" + response;
               }       
     
          });        
