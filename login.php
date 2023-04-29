@@ -29,6 +29,7 @@ if ($row == 0){
 } else if ($row["login"] == $login && $row["password_"] == $bpassword){
         setcookie("login_cookie",$row["user_id"], time()+ 3600);
         echo "success";
+        
 
 }
 
