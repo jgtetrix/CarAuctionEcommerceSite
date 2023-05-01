@@ -21,7 +21,7 @@ else{
 
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
-if ($row == 0){
+if ($row != 0){
     echo "taken";
 }
 else{
