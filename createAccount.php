@@ -2,7 +2,7 @@
 include("dbconfig.php");
 error_reporting(E_ALL|E_STRICT);
 
-$name=$_POST["name_"];
+$name=$_POST["name"];
 $email=$_POST["email"];
 $number=$_POST["number"];
 $login=$_POST["username"];
