@@ -72,7 +72,7 @@
 				data: {name: name, email: email, number: number, username: username, password: password},
 				success: function(response) {
 					if (response.trim() === 'success') {
-						window.location.href = 'account.html?success=true'
+						window.location.href = 'account.php?success=true'
 					} else if (response.trim() === 'taken')  {
 					// Display error message
 					    $('#login-form').append('<p style="color:red">A User with this Email or Username is already created.\n Please use different information</p>');
