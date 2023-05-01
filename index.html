@@ -7,7 +7,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BidNDrive</title>
         <script src="https://kit.fontawesome.com/dac92d3981.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var alertParam = urlParams.get('alert');
+            if (alertParam === 'failed') {
+                    alert('Your bid is too low, please place a bid that is greater than the current highest bid.');   
+            }else if (alertParam === 'success'){
+                    alert('You have sucessfully placed your bid!');
+            }
+
+        </script>
+
 </head>
 
 <body>
@@ -20,12 +32,13 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
+                <li><a href="account.html"><img src="img/accounticon.png" class="logo" alt="Account Logo" height="30"></a></li>
             </ul>
         </div>
     </section>
 
     <section id="page-header">
-        <h2>#AwesomePreOwnedVehicles</h2>
+        <h2>Welcome to BidNDrive!</h2>
     </section>
 
     <section id="product1" class="section-p1">
@@ -36,17 +49,7 @@
                 <div class="desc">
                     <span>Alfa Romeo</span>
                     <h5>2018 Giulia Quadrifoglio</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$30,000</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-1"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -54,18 +57,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2015 Subaru WRX</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$15,000
-                    </h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-2"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -73,18 +65,7 @@
                 <div class="desc">
                     <span>Toyota</span>
                     <h5>2002 Toyota Camry XLE V6</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$5,000
-                    </h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-3"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -92,18 +73,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2015 BMW i8 Coupe</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$60,000
-                    </h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-4"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -111,17 +81,7 @@
                 <div class="desc">
                     <span>BMW</span>
                     <h5>2004 BMW 330i ZHP Sedan</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$7,900</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-5"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -129,35 +89,15 @@
                 <div class="desc">
                     <span>Honda</span>
                     <h5>2002 Honda CR-V EX AWD</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$10,700</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-6"></h4>
                 </div>
             </div>
             <div class="pro">
                 <a href="car-details-7.html"><img src="img/2005ToyotaTacomaX-Runner/Cover.jpg"></a>
                 <div class="desc">
-                    <span>Toytota</span>
+                    <span>Toyota</span>
                     <h5>2005 Toyota Tacoma X-Runner</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$17,250</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-7"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -165,17 +105,7 @@
                 <div class="desc">
                     <span>Lexus</span>
                     <h5>2004 Lexus GS 430</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$185</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-8"></h4>
                 </div>
             </div>
             <div class="pro">
@@ -183,17 +113,7 @@
                 <div class="desc">
                     <span>Subaru</span>
                     <h5>2013 Subaru Impreza WRX STI Hatchback</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$15,873</h4>
-                </div>
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <h4 id="current-price-9"></h4>
                 </div>
             </div>
            
@@ -225,6 +145,107 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "1" },       
+              success: function(response) {       
+                     document.getElementById("current-price-1").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "2" },       
+              success: function(response) {       
+                     document.getElementById("current-price-2").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "3" },       
+              success: function(response) {       
+                     document.getElementById("current-price-3").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "4" },       
+              success: function(response) {       
+                     document.getElementById("current-price-4").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "5" },       
+              success: function(response) {       
+                     document.getElementById("current-price-5").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "6" },       
+              success: function(response) {       
+                     document.getElementById("current-price-6").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "7" },       
+              success: function(response) {       
+                     document.getElementById("current-price-7").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "8" },       
+              success: function(response) {       
+                     document.getElementById("current-price-8").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+    <script>
+        $.ajax({        
+              url: "get_highest_bid_time.php",       
+              type: "POST",       
+              data: { car_id: "9" },       
+              success: function(response) {       
+                     document.getElementById("current-price-9").textContent = "Highest Bid: $" + response;
+              }       
+    
+         });        
+    </script>
+
 </body>
 
 </html>
