@@ -19,14 +19,13 @@ else{
 
 
 $result = mysqli_query($con, $sql);
-$num = mysqli_num_rows($result);
 
 $row = mysqli_fetch_array($result);
 
 if ($row == 0){  
         echo "<br>Login failed either your username or password is invaild\n";
         
-} else if ($row["login"] == $login && $row["password_"] == $bpassword){
+} else if ($row["username"] == $login && $row["password_"] == $bpassword){
         setcookie("login_cookie",$row["user_id"], time()+ 3600);
         echo "success";
         

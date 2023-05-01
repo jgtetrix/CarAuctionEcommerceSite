@@ -880,6 +880,15 @@ button.normal {
 
     
   }
+  #no-bids{
+    max-width: 1000px;
+    margin-left: 100px;      
+    font-size: 16px;
+    margin-top: 30px;
+    width:100%;
+
+  }
+
 
 
 
@@ -904,11 +913,6 @@ button.normal {
         padding-left: 120px;
       }
    
-
-
-    
-
-
   }
 
 

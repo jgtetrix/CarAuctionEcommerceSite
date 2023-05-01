@@ -6,7 +6,7 @@ $con = mysqli_connect($host,$username, $password,$dbname)
 
 if(!isset($_COOKIE['login_cookie'])) {
             echo "Please Login First!";
-            echo "<br><a href= 'index.html'>Login Page</a>";
+            echo "<br><a href= 'login.html'>Login Page</a>";
             die();
     
 }else{
@@ -41,7 +41,7 @@ if(!isset($_COOKIE['login_cookie'])) {
         </section> 
         ";
         
-        $sql = 'SELECT * FROM Users WHERE user_id = $cookie';
+        $sql = 'SELECT * FROM Users WHERE user_id = "' . $cookie . '"';
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);
 
@@ -59,15 +59,11 @@ if(!isset($_COOKIE['login_cookie'])) {
         $sql = 'SELECT b.bid_id, b.bid_amount, c.car_year, c.make, c.model 
                 FROM Bids AS b 
                 INNER JOIN Cars AS c ON b.car_id = c.car_id 
-                WHERE b.user_id = $cookie';
+                WHERE b.user_id = "' . $cookie . '"';
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);
 
-        $bid = $row['bid_id'];
-        $make = $row['make'];
-        $model = $row['model'];
-        $year = $row['car_year'];
-        $amount = $row['bid_amount'];
+        
 
     if (mysqli_num_rows($result) > 0){
 
@@ -86,6 +82,11 @@ if(!isset($_COOKIE['login_cookie'])) {
                         </tr>
         ";
         while($row = mysqli_fetch_array($result)){
+            $bid = $row['bid_id'];
+            $make = $row['make'];
+            $model = $row['model'];
+            $year = $row['car_year'];
+            $amount = $row['bid_amount'];
             echo "
                         <tbody>
                             <tr>
@@ -104,12 +105,12 @@ if(!isset($_COOKIE['login_cookie'])) {
             </div>
             ";
     }else{
-        echo "<p>No Bids Placed</p>" ;
+        echo "<p id='no-bids'>No Bids Placed</p>" ;
     }
-            $sql ='SELECT * FROM Users WHERE user_id = $cookie';
+            $sql ='SELECT * FROM Users WHERE user_id = "' . $cookie . '"';
             $result = mysqli_query($con, $sql);
             $row = mysqli_fetch_array($result);
-            $name = $row['name'];
+            $name = $row['name_'];
             $username = $row['username'];
             $email = $row['email'];
             $number =$row['phone_number'];

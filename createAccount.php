@@ -16,19 +16,18 @@ if ($login =="" || $bpassword == "" || $email == ""|| $number == "") {
         die(" Fields Are Empty\n");
 }
 else{
-        $sql= "SELECT * FROM Users WHERE login='$login'";  
+        $sql= "SELECT * FROM Users WHERE username='$login'";  
 }
 
 $result = mysqli_query($con, $sql);
-$row = mysqli_fetch_array($result);
-if ($row != 0){
+if (mysqli_fetch_array($result) == True){
     echo "taken";
 }
 else{
     $sql = "INSERT INTO Users (name_, username, password_, email, phone_number) VALUES ('$name','$login', '$bpassword', '$email', '$number')";
     if (mysqli_query($con, $sql)){          
         echo "success";
-        $sql= "SELECT * FROM BidNDriveDB.Users WHERE login='$login'";
+        $sql= "SELECT * FROM BidNDriveDB.Users WHERE username='$login'";
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);
         setcookie("login_cookie",$row["user_id"], time()+ 3600);
