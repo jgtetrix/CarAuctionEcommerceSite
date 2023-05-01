@@ -18,7 +18,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="account.html"><img src="img/accounticon.png" class="logo" alt="Account Logo" height="30"></a></li>
+                <li><a href="account.php"><img src="img/accounticon.png" class="logo" alt="Account Logo" height="30"></a></li>
             </ul>
         </div>
     </section>
@@ -246,11 +246,11 @@
                 });
         }
     }   
-        const endDate = new Date('April 26, 2023 23:59:59').getTime();  //Gets end Date (Need to Query DB)
+        const endDate = new Date('may 2, 2023 23:59:59').getTime();
 
         updateCountdown(endDate);
 
-        const interval = setInterval(() => { //Constantly undates every second
+        const interval = setInterval(() => { //Constantly updates every second
         updateCountdown(endDate);
         }, 1000);
 </script>
@@ -312,7 +312,7 @@
     }
 
     var myCookieValue = getCookie('login_cookie');
-    document.getElementsByName('user_id').value = myCookieValue;
+    document.querySelector('input[name="user_id"]').value = myCookieValue;
 
 </script>
 

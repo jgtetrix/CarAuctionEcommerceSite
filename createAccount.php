@@ -2,6 +2,7 @@
 include("dbconfig.php");
 error_reporting(E_ALL|E_STRICT);
 
+$name=$_POST["name_"];
 $email=$_POST["email"];
 $number=$_POST["number"];
 $login=$_POST["username"];
@@ -24,7 +25,7 @@ if ($row == 0){
     echo "taken";
 }
 else{
-    $sql = "INSERT INTO Users (username, password_, email, phone_number) VALUES ('$login', '$bpassword', '$email', '$number')";
+    $sql = "INSERT INTO Users (name_, username, password_, email, phone_number) VALUES ('$name','$login', '$bpassword', '$email', '$number')";
     if (mysqli_query($con, $sql)){          
         echo "success";
         $sql= "SELECT * FROM BidNDriveDB.Users WHERE login='$login'";

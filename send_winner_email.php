@@ -16,10 +16,10 @@ $highest_bid = $row["highest_bid"];
 $winning_user_id = $row["user_id"];
 
 // Retrieve the name and email address of the winning user
-$sql = "SELECT name, email FROM BidNDriveDB.Users WHERE user_id = $winning_user_id";
+$sql = "SELECT name_, email FROM BidNDriveDB.Users WHERE user_id = $winning_user_id";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
-$winning_user_name = $row["name"];
+$winning_user_name = $row["name_"];
 $winning_user_email = $row["email"];
 
 // Send an email notification to the winning user

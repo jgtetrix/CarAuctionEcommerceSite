@@ -8,7 +8,7 @@ $con = mysqli_connect($host,$username, $password, $dbname)
         or die("Cannot connect to DB");
 
 
-$sql = "SELECT MAX(bid_amount) AS highest_bid, user_id FROM .Bids WHERE car_id = '$car_id'";
+$sql = "SELECT MAX(bid_amount) AS highest_bid, user_id FROM Bids WHERE car_id = '$car_id'";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
 $highest_bid = $row["highest_bid"];

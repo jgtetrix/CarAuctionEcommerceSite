@@ -40,14 +40,14 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="img/BidNDrive.png" class="logo" alt="BidNDrive Logo" height="150"></a>
+        <a href="index.html"><img src="img/BidNDrive.png" class="logo" alt="BidNDrive Logo" height="150"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Auctions</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a class ="active" href="login.html">Login</a></li>
-				<li><a href="account.html"><img src="img/accounticon.png" class="logo" alt="Account Logo" height="30"></a></li>
+				<li><a href="account.php"><img src="img/accounticon.png" class="logo" alt="Account Logo" height="30"></a></li>
             </ul>
         </div>
     </section>
@@ -64,7 +64,7 @@
 				data: {username: username, password: password},
 				success: function(response) {
 					if (response.trim() === 'success') {
-						window.location.href = 'account.html'
+						window.location.href = 'account.php'
 					} else if (response != 'success')  {
 					// Display error message
 					$('#login-form').append('<p style="color:red">Invalid login credentials</p>');

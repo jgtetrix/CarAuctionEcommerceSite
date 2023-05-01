@@ -9,7 +9,7 @@ $user_id = $_POST['user_id'];
 $con = mysqli_connect($host,$username, $password, $dbname)
         or die("Cannot connect to DB");
 
-$sql = "SELECT MAX(bid_amount) AS highest_bid FROM BidNDriveDB.Bids WHERE car_id = '$car_id'";
+$sql = "SELECT MAX(bid_amount) AS highest_bid FROM Bids WHERE car_id = '$car_id'";
 
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
@@ -17,12 +17,12 @@ $highest_bid = $row['highest_bid'];
 
 
 if ($bid_amount <= $highest_bid){
-    header('Location: index.html?alert=true');
+    header('Location: index.html?alert=failed');
 }
 else{
     $sql = "INSERT INTO Bids (user_id, car_id, bid_amount) VALUES ('$user_id', '$car_id', '$bid_amount')";
     $result = mysqli_query($con, $sql);
-    header('Location: index.html?success=true');
+    header('Location: index.html?alert=success');
 }
 
 

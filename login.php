@@ -14,7 +14,7 @@ if ($login =="" || $bpassword == "" ) {
         die(" Login Fields Are Empty\n");
 }
 else{
-        $sql= "SELECT * FROM BidNDriveDB.Users WHERE login='$login'";  
+        $sql= "SELECT * FROM Users WHERE username='$login'";  
 }
 
 
