@@ -47,7 +47,7 @@
             <label for="email">Email:</label>
 			<input type="text" id="email" name="email" required>
             <label for="number">Phone Number:</label>
-			<input type="tel" id="number" name="number" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+			<input type="tel" id="number" name="number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
 			<label for="username">Username:</label>
 			<input type="text" id="username" name="username" required>
 			<label for="password">Password:</label>
@@ -72,7 +72,7 @@
 				data: {name: name, email: email, number: number, username: username, password: password},
 				success: function(response) {
 					if (response.trim() === 'success') {
-						window.location.href = 'account.html?success=true'
+						window.location.href = 'account.php?success=true'
 					} else if (response.trim() === 'taken')  {
 					// Display error message
 					    $('#login-form').append('<p style="color:red">A User with this Email or Username is already created.\n Please use different information</p>');
